@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Food Waste Management - EcoConnect</title>
+  <link rel="stylesheet" href="food-waste-styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>EcoConnect</h1>
+      <ul>
+        <li><a href="#donor-module">Donor Module</a></li>
+        <li><a href="#receiver-module">Receiver Module</a></li>
+        <li><a href="dashboard.html">Back to Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="donor-module">
+      <h2>Donor Module</h2>
+      <p>Upload descriptions and images of available food items.</p>
+      <form action="/done" method="POST" enctype="multipart/form-data">
+          <div>
+            <label for="id">Food Id</label>
+            <input type="text" id="id" placeholder="id"
+              value="id" name="id" required>
+          </div>
+          <div>
+            <label for="name">Food name</label>
+            <input type="text" id="name" placeholder="Name"
+              value="name" name="name" required>
+          </div>
+          <div>
+            <label for="quantity">Food quantity</label>
+            <textarea id="quantity" name="quantity" value="quantity" rows="2"
+                placeholder="quantity" required>
+            </textarea>
+          </div>
+          <div>
+            <label for="expiry_date">Food expiry_date</label>
+            <input type="text" id="expiry_date" placeholder="expiry_date"
+              value="expiry_date" name="expiry_date" required>
+          </div>
+          <div>
+            <label for="image">Upload Image</label>
+            <input type="file" id="image"
+              name="image" value="image" required>
+          </div>
+          <div>
+            <button type="submit">Submit</button>
+          </div>
+  
+      </form>
+    </section>
+    <hr>
+
+</main>
+</body>
+</html>
